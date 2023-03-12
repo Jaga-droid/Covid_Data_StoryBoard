@@ -13,11 +13,11 @@ const linezoom_svg = d3.select("#LineChartZoomid")
        `translate(${Line_zoom_margin.left}, ${Line_zoom_margin.top})`);
 
 //Read the data
-d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/3_TwoNumOrdered_comma.csv",
+d3.csv("https://raw.githubusercontent.com/Jaga-droid/Covid_Data_StoryBoard/main/Resources/Preprocessing/World_Cases_daily.csv",
 
 // When reading the csv, I must format variables:
 function(d){
- return { date : d3.timeParse("%Y-%m-%d")(d.date), value : d.value }
+ return { date : d3.timeParse("%Y-%m-%d")(d.date), value : d.World }
 }).then(
 
 // Now I can use this dataset:
@@ -33,7 +33,7 @@ function(data) {
 
  // Add Y axis
  const linezoom_y = d3.scaleLinear()
-   .domain([0, d3.max(data, function(d) { return +d.value; })])
+   .domain([0, d3.max(data, function(d) { return +d.World; })])
    .range([ Linezoom_height, 0 ]);
  yAxis_linezoom = linezoom_svg.append("g")
    .call(d3.axisLeft(linezoom_y));
@@ -65,7 +65,7 @@ function(data) {
    .attr("stroke-width", 1.5)
    .attr("d", d3.line()
      .x(function(d) { return linezoom_x(d.date) })
-     .y(function(d) { return linezoom_y(d.value) })
+     .y(function(d) { return linezoom_y(d.World) })
      )
 
  // Add the brushing
@@ -101,7 +101,7 @@ function(data) {
        .duration(1000)
        .attr("d", d3.line()
          .x(function(d) { return linezoom_x(d.date) })
-         .y(function(d) { return linezoom_y(d.value) })
+         .y(function(d) { return linezoom_y(d.World) })
        )
  }
 
@@ -114,7 +114,7 @@ function(data) {
      .transition()
      .attr("d", d3.line()
        .x(function(d) { return linezoom_x(d.date) })
-       .y(function(d) { return linezoom_y(d.value) })
+       .y(function(d) { return linezoom_y(d.World) })
    )
  });
 
