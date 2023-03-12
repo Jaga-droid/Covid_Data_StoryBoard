@@ -1,0 +1,32 @@
+ /* Add some basic styling to the chart */
+ .bar {
+    fill: hotpink;
+  }
+
+  .bar:hover {
+    fill: cyan;
+  }
+
+  .axis-x_bar path,
+  .axis-y_bar path {
+    fill: none;
+    stroke: lightgrey;
+    shape-rendering: crispEdges;
+  }
+
+  .axis-x_bar .tick line {
+    stroke: lightgrey;
+    opacity: 0.3;
+  }
+
+  .axis-y_bar .tick line {
+    stroke: lightgrey;
+    opacity: 0.7;
+  }
+  .myclass {
+    margin-bottom: 50px;
+    background-color: #f8f7f7;
+    border-width: 4px;
+    border-style: solid;
+    border-color: rgb(14, 106, 219);
+  }
