@@ -18,7 +18,7 @@ const svg = d3
   .attr('transform', `translate(${bar_margin.left}, ${bar_margin.top})`);
 
 // Load data from CSV file
-d3.csv('data.csv').then(function (bar_data) {
+d3.csv('https://raw.githubusercontent.com/Jaga-droid/Covid_Data_StoryBoard/main/Resources/DataSet/data.csv').then(function (bar_data) {
 
   // Set the x and y scales for the chart
   const x = d3
