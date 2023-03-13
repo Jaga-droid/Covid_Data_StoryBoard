@@ -1,10 +1,11 @@
     // The svg
-    
-    const svg_map = d3.select("#Mapid");
-        svg_map.attr("width", window.innerWidth-100);
-        svg_map.attr("height",window.innerHeight-100);
-        const width = +svg_map.attr("width")
-        const height = +svg_map.attr("height");
+    const winwidth = window.innerWidth;
+    const winheight = window.innerHeight;
+    const map_svg = d3.select("svg");
+        map_svg.attr("width",winwidth-100);
+        map_svg.attr("height",winheight-100);
+        const width = +map_svg.attr("width")
+        const height = +map_svg.attr("height");
     
     // Map and projection
     const path = d3.geoPath();
@@ -14,9 +15,9 @@
       .translate([width / 2, height / 2]);
     
     // Data and color scale
-    const svg_data = new Map();
+    const data = new Map();
     const colorScale = d3.scaleThreshold()
-      .domain([100000, 1000000, 10000000, 30000000, 100000000, 500000000])
+      .domain([0,100000, 1000000, 10000000, 30000000, 100000000, 500000000])
       //.range(d3.schemeBlues[9]);
       .range(d3.schemeSpectral[8]);
     
@@ -24,7 +25,7 @@
     Promise.all([
     d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson"),
     d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world_population.csv", function(d) {
-        svg_data.set(d.code, +d.pop)
+        data.set(d.code, +d.pop)
     })]).then(function(loadData){
         let topo = loadData[0]
     
@@ -69,7 +70,7 @@
       }
     
       // Draw the map
-      svg_map.append("g")
+      map_svg.append("g")
         .selectAll("path")
         .data(topo.features)
         .enter()
@@ -80,7 +81,7 @@
           )
           // set the color of each country
           .attr("fill", function (d) {
-            d.total = svg_data.get(d.id) || 0;
+            d.total = data.get(d.id) || 0;
             return colorScale(d.total);
           })
           .style("stroke", "transparent")
@@ -91,3 +92,4 @@
           .on("click",countryClick).call(zoom)
     
     })
+    

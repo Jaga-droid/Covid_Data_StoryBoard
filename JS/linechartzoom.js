@@ -13,7 +13,7 @@ const linezoom_svg = d3.select("#LineChartZoomid")
        `translate(${Line_zoom_margin.left}, ${Line_zoom_margin.top})`);
 
 //Read the data
-d3.csv("https://raw.githubusercontent.com/Jaga-droid/Covid_Data_StoryBoard/main/Resources/Preprocessing/World_Cases_daily.csv",
+d3.csv("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/cases_deaths/new_cases.csv",
 
 // When reading the csv, I must format variables:
 function(d){
