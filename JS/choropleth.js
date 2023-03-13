@@ -17,15 +17,16 @@
     // Data and color scale
     const data = new Map();
     const colorScale = d3.scaleThreshold()
-      .domain([0,100000, 1000000, 10000000, 30000000, 100000000, 500000000])
-      //.range(d3.schemeBlues[9]);
-      .range(d3.schemeSpectral[8]);
+      .domain([1000,10000,30000,100000,1000000])
+      
+      .range(d3.schemeBlues[9]);
+      // .range(d3.schemeSpectral[8]);
     
     // Load external data and boot
     Promise.all([
-    d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson"),
-    d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world_population.csv", function(d) {
-        data.set(d.code, +d.pop)
+    d3.json("https://raw.githubusercontent.com/Jaga-droid/Covid_Data_StoryBoard/main/Resources/DataSet/custom.geojson"),
+    d3.csv("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv", function(d) {
+        data.set(d.location, +d.total_cases)
     })]).then(function(loadData){
         let topo = loadData[0]
     
@@ -81,7 +82,7 @@
           )
           // set the color of each country
           .attr("fill", function (d) {
-            d.total = data.get(d.id) || 0;
+            d.total = data.get(d.properties.name) || 0;
             return colorScale(d.total);
           })
           .style("stroke", "transparent")
