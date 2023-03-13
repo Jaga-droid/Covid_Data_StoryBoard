@@ -17,7 +17,7 @@ d3.csv("https://raw.githubusercontent.com/Jaga-droid/Covid_Data_StoryBoard/main/
 
 // When reading the csv, I must format variables:
 function(d){
- return { date : d3.timeParse("%Y-%m-%d")(d.date), value : d.World }
+ return { date : d3.timeParse("%Y-%m-%d")(d.date), World : d.World }
 }).then(
 
 // Now I can use this dataset:
