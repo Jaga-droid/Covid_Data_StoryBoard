@@ -8,7 +8,7 @@
     margin-left: -50px;
     background-color: #1ce8e8;
   
-    animation: rotate 0.001s linear infinite;
+    animation: rotate 1s linear infinite;
   }
   
   @keyframes rotate {

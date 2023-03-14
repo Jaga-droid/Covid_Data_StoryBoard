@@ -9,7 +9,7 @@ const bar_width = window.innerWidth * 0.5 - bar_margin.left - bar_margin.right;
 const bar_height = window.innerHeight * 0.5 - bar_margin.top - bar_margin.bottom;
 
 // Create the SVG container for the chart
-const svg = d3
+const bar_svg = d3
   .select('#Barchartid')
   .append('svg')
   .attr('width', bar_width + bar_margin.left + bar_margin.right)
@@ -33,7 +33,7 @@ d3.csv('https://raw.githubusercontent.com/Jaga-droid/Covid_Data_StoryBoard/main/
   const xAxis = d3.axisBottom(x);
   const yAxis = d3.axisLeft(y);
 
-  svg
+  bar_svg
     .append('g')
     .attr('class', 'axis-x')
     .attr('transform', `translate(0, ${bar_height})`)
@@ -42,10 +42,10 @@ d3.csv('https://raw.githubusercontent.com/Jaga-droid/Covid_Data_StoryBoard/main/
     .attr('transform', 'rotate(-45)')
     .attr('text-anchor', 'end');
 
-  svg.append('g').attr('class', 'axis-y').call(yAxis);
+  bar_svg.append('g').attr('class', 'axis-y').call(yAxis);
 
   // Add the bars to the chart
-  svg
+  bar_svg
     .selectAll('.bar')
     .data(bar_data)
     .enter()

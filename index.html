@@ -4,6 +4,15 @@
     <h1
         style="background-color: #7fea78;border-width: 4px;border-style: solid;border-color: rgb(241, 61, 169);text-align: center;width:800px;right: 10%;">
         Reshaping Our World: The Impact of COVID-19</h1>
+    <h2
+        style="background-color: #b2e9ae;border-width: 4px;border-style: solid;border-color: rgb(241, 61, 169);text-align: center;width:1200px;right: 10%;">
+        Covid-19 has transformed our lives completely remaining as one of the most severe
+        global catastrophes. Various studies were undertaken to deduce the dynamics of Covid's evolution and its
+        proliferation.
+        Lockdowns, among other measures were implemented in a desperate attempt to curb the spread of the virus.
+        Covid's mutations, time, and the vaccine-creating scientists were engaged in a tense three-way conflict.
+        Every element of life, including social, economic, health, and the environment, has been impacted by the
+        pandemic.</h2>
 
     <script type='text/javascript' src='./JS/d3.v7.js'></script>
     <link rel="stylesheet" type="text/css" href="./CSS/Body.css">
@@ -16,36 +25,56 @@
     <link rel="stylesheet" type="text/css" href="./CSS/spinmystic.css">
     <img class="image2" src="./Resources/Images/mystic.svg"></img>
 
-
-
-    <svg class='mapsvg' id='Mapid'style></svg>
-    <link rel="stylesheet" type="text/css" href="./CSS/Map.css">
-    <script type='text/javascript' src='./JS/choropleth.js'></script>
-
-    <div class="paraclass" id="MapInsights">Insights refer to a deep understanding or realization about a particular situation,
-        idea, or phenomenon. Insights are often gained through observation, analysis, and reflection,
-        and they can provide a new perspective or approach to a problem or challenge. Insights can be based on
-        intuition,experience, research, or a combination of these factors, and they can be applied to a wide range of
-        fields,including business, science, psychology, and more. Insights can be used to make better decisions, identify
-        opportunities,and create innovative solutions.
-    </div>
-    <link rel="stylesheet" type="text/css" href="./CSS/mapinsight.css">
     
     <div class="myclass" id='BarChartid'></div>
     <link rel="stylesheet" type="text/css" href="./CSS/Barchart.css">
     <script type='text/javascript' src='./JS/Barchart.js'></script>
 
+    <div class='mapsvg' id='Mapid' style></div>
+    <link rel="stylesheet" type="text/css" href="./CSS/Map.css">
+    <script type='text/javascript' src='./JS/choropleth.js'></script>
+
+
+    <div class="paraclass" id="MapInsights">
+        It is evident from the above map that all continents other than Africa have
+        observed a considerably large spike in covid cases overall.
+    </div>
+    <link rel="stylesheet" type="text/css" href="./CSS/Insights.css">
+
+
+
     <div id="SwitchChartsid"></div>
     <button onclick="toggleDiv('LineChart')">Switch between Linecharts</button>
     <script type='text/javascript' src='./JS/switchCharts.js'></script>
 
-    <div class="linecss" id='LineChartid' style="display:block"></div>
+    <div class="linecss" id='LineChartid' style="display:block">
+        <div class="LineChartparaclass" id="LineChartid"> Here we can see the growth of new covid
+            cases spanning over a time
+            period of 2019-23.
+            Click on the button above to double down on the timeline with respect to months, days and so on.
+        </div>
+        <link rel="stylesheet" type="text/css" href="./CSS/Insights.css">
+    </div>
     <link rel="stylesheet" type="text/css" href="./CSS/Linechart.css">
     <script type='text/javascript' src='./JS/Linechart.js'></script>
 
-    <div class="linecss" id='LineChartZoomid' style="display:none"></div>
+    <div class="linecss" id='LineChartZoomid' style="display:none">
+
+        <div class="LineChartparaclass" id="LineChartZoomid"> On closer inspection, we see that new cases across the
+            world barely rose to a million in 2020, while it tripled in 2022
+            followed by a substantial spike by a factor of 7 times since 2020. The extent to which lockdowns were
+            implemented could have
+            influenced the spike and/or drop in covid cases.
+        </div>
+        <link rel="stylesheet" type="text/css" href="./CSS/Insights.css">
+    </div>
     <link rel="stylesheet" type="text/css" href="./CSS/Linechart.css">
     <script type='text/javascript' src='./JS/Linechartzoom.js'></script>
+
+
+
+
+
 
 
 

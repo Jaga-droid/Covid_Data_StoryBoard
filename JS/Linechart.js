@@ -12,11 +12,11 @@
         .attr("transform", `translate(${line_margin.left},${line_margin.top})`);
     
     //Read the data
-    d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/3_TwoNumOrdered_comma.csv",
+    d3.csv("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/cases_deaths/new_cases.csv",
     
       // When reading the csv, I must format variables:
       function(d){
-        return { date : d3.timeParse("%Y-%m-%d")(d.date), value : d.value }
+        return { date : d3.timeParse("%Y-%m-%d")(d.date), World : d.World }
       }).then(
     
       // Now I can use this dataset:
@@ -32,7 +32,7 @@
     
         // Add Y axis
         const line_y = d3.scaleLinear()
-          .domain([0, d3.max(data, function(d) { return +d.value; })])
+          .domain([0, d3.max(data, function(d) { return +d.World; })])
           .range([ line_height, 0 ]);
         line_svg.append("g")
           .call(d3.axisLeft(line_y));
@@ -45,7 +45,7 @@
           .attr("stroke-width", 1.5)
           .attr("d", d3.line()
             .x(function(d) { return line_x(d.date) })
-            .y(function(d) { return line_y(d.value) })
+            .y(function(d) { return line_y(d.World) })
             )
     
     })
