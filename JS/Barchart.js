@@ -5,7 +5,7 @@ const bar_margin = {
   bottom: 70,
   left: 40,
 };
-const bar_width = window.innerWidth * 0.5 - bar_margin.left - bar_margin.right;
+const bar_width = window.innerWidth * 0.5 - bar_margin.left - bar_margin.right-50;
 const bar_height = window.innerHeight * 0.5 - bar_margin.top - bar_margin.bottom;
 
 // Create the SVG container for the chart
@@ -18,16 +18,17 @@ const bar_svg = d3
   .attr('transform', `translate(${bar_margin.left}, ${bar_margin.top})`);
 
 // Load data from CSV file
-d3.csv('https://raw.githubusercontent.com/Jaga-droid/Covid_Data_StoryBoard/main/Resources/DataSet/data.csv').then(function (bar_data) {
+file_name='Countriestacklingcovid'
+d3.csv('https://raw.githubusercontent.com/Jaga-droid/Covid_Data_StoryBoard/main/Resources/DataSet/Countriestacklingcovid/'+file_name+'.csv').then(function (bar_data) {
 
   // Set the x and y scales for the chart
   const x = d3
     .scaleBand()
     .range([0, bar_width])
-    .domain(bar_data.map((d) => d.name))
-    .padding(0.1);
+    .domain(bar_data.map((d) => d.Country))
+    .padding(0.3);
 
-  const y = d3.scaleLinear().range([bar_height, 0]).domain([0, d3.max(bar_data, (d) => d.value)]);
+  const y = d3.scaleLinear().range([bar_height, 0]).domain([0, d3.max(bar_data, (d) => d.new_cases)]);
 
   // Add the x and y axis to the chart
   const xAxis = d3.axisBottom(x);
@@ -51,8 +52,8 @@ d3.csv('https://raw.githubusercontent.com/Jaga-droid/Covid_Data_StoryBoard/main/
     .enter()
     .append('rect')
     .attr('class', 'bar')
-    .attr('x', (d) => x(d.name))
-    .attr('y', (d) => y(d.value))
+    .attr('x', (d) => x(d.Country))
+    .attr('y', (d) => y(d.new_cases))
     .attr('width', x.bandwidth())
-    .attr('height', (d) => bar_height - y(d.value));
+    .attr('height', (d) => bar_height - y(d.new_cases));
 });

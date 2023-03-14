@@ -135,7 +135,7 @@
         .append("Mapid")
         .style("opacity", 0)
         .attr("class", "tooltip")
-        
+
 
 
       let clickContinent = function (d) {
@@ -183,7 +183,7 @@
         .on("mouseover", mouseover)
         .on("mousemove", mousemove)
         .on("mouseleave", mouseleave)
-      // .append('title').text(d => d.group)
+        .append('title').text(d => d.group)
 
 
 
