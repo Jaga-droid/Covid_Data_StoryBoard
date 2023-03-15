@@ -141,6 +141,7 @@
       let clickContinent = function (d) {
         var mylocation = d.srcElement.__data__.group;
         console.log(mylocation);
+        // drawPie(mylocation);
       }
 
       // A function that change this tooltip when the user hover a point.
@@ -180,9 +181,9 @@
         .attr("stroke-width", 3)
         .attr("fill-opacity", 0.5)
         .on("click", clickContinent)
-        .on("mouseover", mouseover)
-        .on("mousemove", mousemove)
-        .on("mouseleave", mouseleave)
+        // .on("mouseover", mouseover)
+        // .on("mousemove", mousemove)
+        // .on("mouseleave", mouseleave)
         .append('title').text(d => d.group)
 
 
