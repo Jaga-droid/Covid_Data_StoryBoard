@@ -43,7 +43,7 @@
     border-color: rgb(234, 15, 37);
   }
 
-  .myclass3 {
+  .myclass3,.myclass4 {
     margin-top: 50px;
     margin-bottom: 50px;
     float:none;

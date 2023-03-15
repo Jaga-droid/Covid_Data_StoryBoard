@@ -46,11 +46,11 @@ function togglebar2(divid) {
     var node = document.getElementById('barswitchInsights2');
     var node_1 = document.getElementById('barchange2');
     switch (divid) {
-        case 'bbar1':
+        case 'bbar11':
             node_1.textContent='COASTAL REGIONS';
             node.textContent = ' When taking geographic position into account, we can see that countries in the coastal regions are affected the most, for instance, America.';
             break;
-        case 'bbar2':
+        case 'bbar22':
             node_1.textContent=' ISLAND REGIONS';
             node.textContent = 'Island regions turn out to be the safest from COVID.';
             break;
