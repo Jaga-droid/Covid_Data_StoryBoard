@@ -131,10 +131,15 @@
         .domain([1, 100]) // What's in the data
         .range([4, 50]) // Size in pixel
 
-      var tooltip = d3.select("svg")
-        .append("Mapid")
+        const tooltip = d3.select("#mapsvg")
+        .append("div")
         .style("opacity", 0)
         .attr("class", "tooltip")
+        .style("background-color", "white")
+        .style("border", "solid")
+        .style("border-width", "1px")
+        .style("border-radius", "5px")
+        .style("padding", "10px")
 
 
 
@@ -152,13 +157,14 @@
       }
 
       var mousemove = function (event, d) {
-        console.log(d.group);
-        console.log(event.x);
+        // console.log(d.group);
+        // console.log(event.x);
         tooltip
           .html(d.group)
           .style("left", (event.x) / 2 + "px")
           .style("top", (event.y) / 2 - 30 + "px")
 
+          
       }
 
       // A function that change this tooltip when the leaves a point: just need to set opacity to 0 again
@@ -181,9 +187,9 @@
         .attr("stroke-width", 3)
         .attr("fill-opacity", 0.5)
         .on("click", clickContinent)
-        // .on("mouseover", mouseover)
-        // .on("mousemove", mousemove)
-        // .on("mouseleave", mouseleave)
+        .on("mouseover", mouseover)
+        .on("mousemove", mousemove)
+        .on("mouseleave", mouseleave)
         .append('title').text(d => d.group)
 
 

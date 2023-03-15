@@ -11,7 +11,7 @@ var tree_2 = d3.cluster()
 var stratify = d3.stratify()
     .parentId(function(d) { return d.id.substring(0, d.id.lastIndexOf(".")); });
 
-d3.json("flare.csv", function(error, data_2) {
+d3.json("https://raw.githubusercontent.com/Jaga-droid/Covid_Data_StoryBoard/main/Resources/DataSet/Clustering/d3-dendrogram_2021.json", function(error, data_2) {
   if (error) throw error;
 
   var root_2= stratify(data_2)
