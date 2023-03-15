@@ -1,0 +1,216 @@
+{
+    "children": [
+        {
+            "children": [
+                {
+                    "children": [
+                        {
+                            "children": [
+                                {
+                                    "children": [],
+                                    "name": "Czechia"
+                                },
+                                {
+                                    "children": [],
+                                    "name": "Slovenia"
+                                }
+                            ],
+                            "name": "Czechia-Slovenia"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "children": [],
+                                    "name": "Cyprus"
+                                },
+                                {
+                                    "children": [
+                                        {
+                                            "children": [],
+                                            "name": "Serbia"
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "Belgium"
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "Netherlands"
+                                                }
+                                            ],
+                                            "name": "Belgium-Netherlands"
+                                        }
+                                    ],
+                                    "name": "Belgium-Netherlands-Serbia"
+                                }
+                            ],
+                            "name": "Belgium-Cyprus-Netherlands-Serbia"
+                        }
+                    ],
+                    "name": "Belgium-Cyprus-Czechia-Netherlands-Serbia-Slovenia"
+                },
+                {
+                    "children": [
+                        {
+                            "children": [
+                                {
+                                    "children": [],
+                                    "name": "Australia"
+                                },
+                                {
+                                    "children": [
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "Bolivia"
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "Finland"
+                                                }
+                                            ],
+                                            "name": "Bolivia-Finland"
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "Canada"
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "South Africa"
+                                                }
+                                            ],
+                                            "name": "Canada-South Africa"
+                                        }
+                                    ],
+                                    "name": "Bolivia-Canada-Finland-South Africa"
+                                }
+                            ],
+                            "name": "Australia-Bolivia-Canada-Finland-South Africa"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "children": [],
+                                            "name": "Italy"
+                                        },
+                                        {
+                                            "children": [],
+                                            "name": "Malaysia"
+                                        }
+                                    ],
+                                    "name": "Italy-Malaysia"
+                                },
+                                {
+                                    "children": [
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "Sweden"
+                                                },
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "children": [],
+                                                            "name": "Denmark"
+                                                        },
+                                                        {
+                                                            "children": [
+                                                                {
+                                                                    "children": [],
+                                                                    "name": "Portugal"
+                                                                },
+                                                                {
+                                                                    "children": [],
+                                                                    "name": "Spain"
+                                                                }
+                                                            ],
+                                                            "name": "Portugal-Spain"
+                                                        }
+                                                    ],
+                                                    "name": "Denmark-Portugal-Spain"
+                                                }
+                                            ],
+                                            "name": "Denmark-Portugal-Spain-Sweden"
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "Austria"
+                                                },
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "children": [
+                                                                {
+                                                                    "children": [],
+                                                                    "name": "Slovakia"
+                                                                },
+                                                                {
+                                                                    "children": [
+                                                                        {
+                                                                            "children": [],
+                                                                            "name": "France"
+                                                                        },
+                                                                        {
+                                                                            "children": [],
+                                                                            "name": "Israel"
+                                                                        }
+                                                                    ],
+                                                                    "name": "France-Israel"
+                                                                }
+                                                            ],
+                                                            "name": "France-Israel-Slovakia"
+                                                        },
+                                                        {
+                                                            "children": [
+                                                                {
+                                                                    "children": [],
+                                                                    "name": "Switzerland"
+                                                                },
+                                                                {
+                                                                    "children": [
+                                                                        {
+                                                                            "children": [],
+                                                                            "name": "Luxembourg"
+                                                                        },
+                                                                        {
+                                                                            "children": [],
+                                                                            "name": "United States"
+                                                                        }
+                                                                    ],
+                                                                    "name": "Luxembourg-United States"
+                                                                }
+                                                            ],
+                                                            "name": "Luxembourg-Switzerland-United States"
+                                                        }
+                                                    ],
+                                                    "name": "France-Israel-Luxembourg-Slovakia-Switzerland-United States"
+                                                }
+                                            ],
+                                            "name": "Austria-France-Israel-Luxembourg-Slovakia-Switzerland-United States"
+                                        }
+                                    ],
+                                    "name": "Austria-Denmark-France-Israel-Luxembourg-Portugal-Slovakia-Spain-Sweden-Switzerland-United States"
+                                }
+                            ],
+                            "name": "Austria-Denmark-France-Israel-Italy-Luxembourg-Malaysia-Portugal-Slovakia-Spain-Sweden-Switzerland-United States"
+                        }
+                    ],
+                    "name": "Australia-Austria-Bolivia-Canada-Denmark-Finland-France-Israel-Italy-Luxembourg-Malaysia-Portugal-Slovakia-South Africa-Spain-Sweden-Switzerland-United States"
+                }
+            ],
+            "name": "Australia-Austria-Belgium-Bolivia-Canada-Cyprus-Czechia-Denmark-Finland-France-Israel-Italy-Luxembourg-Malaysia-Netherlands-Portugal-Serbia-Slovakia-Slovenia-South Africa-Spain-Sweden-Switzerland-United States"
+        }
+    ],
+    "name": "Root1"
+}

@@ -86,13 +86,13 @@
           long: 100.6197,
           lat: 34.0479,
           group: "Asia",
-          size: 40
+          size: 60
         }, // Asia
         {
           long: -105.2551,
           lat: 54.5260,
           group: "North America",
-          size: 70
+          size: 90
         }, // north america
         {
           long: -55.4915,
@@ -110,7 +110,7 @@
           long: 15.2551,
           lat: 54.5260,
           group: "Europe",
-          size: 50
+          size: 60
         }, // europe
         {
           long: 140.0188,
