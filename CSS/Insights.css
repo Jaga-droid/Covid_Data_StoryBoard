@@ -1,4 +1,4 @@
-.paraclass{
+.paraclass,.LineChartparaclass,.mytreelink{
     display:list-item;
     height: 50px;
     margin-top: 50px;
@@ -12,25 +12,11 @@
     color:rgb(46, 12, 217);
 }
 
-.LineChartparaclass{
+.paraclassbar{
     display:list-item;
     height: 50px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    background-color: #fafafa;
-    border-width: 4px;
-    border-style: solid;
-    border-color: rgb(241, 61, 169);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size:20px;
-    color:rgb(46, 12, 217);
-}
-
-.mytreelink{
-    display:list-item;
-    height: 50px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     background-color: #fafafa;
     border-width: 4px;
     border-style: solid;

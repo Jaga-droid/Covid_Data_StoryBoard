@@ -19,7 +19,8 @@ const bar_svg = d3
 
 // Load data from CSV file
 file_name='Countriestacklingcovid'
-d3.csv('https://raw.githubusercontent.com/Jaga-droid/Covid_Data_StoryBoard/main/Resources/DataSet/Countriestacklingcovid/'+file_name+'.csv').then(function (bar_data) {
+
+d3.csv('https://raw.githubusercontent.com/Jaga-droid/Covid_Data_StoryBoard/main/Resources/DataSet/Countries_tackling_Covid/'+file_name+'.csv').then(function (bar_data) {
 
   // Set the x and y scales for the chart
   const x = d3

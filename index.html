@@ -72,7 +72,8 @@
         <button onclick="toggleDiv('LineChart')">Switch between Linecharts</button>
         <div class="LineChartparaclass" id="LineChartZoomid"> On closer inspection, we see that new cases across the
             world barely rose to a million in 2020, while it tripled in 2022
-            followed by a substantial spike by a factor of 7 times in 2023 since 2020. The extent to which lockdowns were
+            followed by a substantial spike by a factor of 7 times in 2023 since 2020. The extent to which lockdowns
+            were
             implemented could have
             influenced the spike and/or drop in covid cases.
         </div>
@@ -87,11 +88,11 @@
         get a gist of how they have dealt with the pandemic</h3>
     <div id="Barduo">
         <div class="myclass" id='BarChartid'>
-            
-    <div class="paraclass" id="bar1">
-        NEW CASES
-    </div>
-    <link rel="stylesheet" type="text/css" href="./CSS/Insights.css">
+
+            <div class="paraclass" id="bar1">
+                NEW CASES
+            </div>
+            <link rel="stylesheet" type="text/css" href="./CSS/Insights.css">
         </div>
         <link rel="stylesheet" type="text/css" href="./CSS/Barchart.css">
         <script type='text/javascript' src='./JS/Barchart.js'></script>
@@ -105,10 +106,36 @@
         <link rel="stylesheet" type="text/css" href="./CSS/Barchart.css">
         <script type='text/javascript' src='./JS/Barchart2.js'></script>
     </div>
+    <div class="myclass3" id="barswitch">
+        <button onclick="update_bar('population_density');togglebar('bbar1')" , style="float: left;" ,
+            id="bbar1">population_density</button>
+        <button onclick="update_bar('hospital_beds_per_thousand');togglebar('bbar2')" , style="float: left;" ,
+            id="bbar2">hospital_beds_per_thousand</button>
+        <button onclick="update_bar('positive_rate');togglebar('bbar3')" , style="float: left;" ,
+            id="bbar3">positive_rate_avg</button>
+        <button onclick="update_bar('stringency_index');togglebar('bbar4')" , style="float: left;" ,
+            id="bbar4">stringency_index</button>
+        <button onclick="update_bar('tests_per_case_avg');togglebar('bbar5')" , style="float: left;" ,
+            id="bbar5">tests_per_case_avg</button>
+        <script type='text/javascript' src='./JS/Barswitch.js'></script>
+        <link rel="stylesheet" type="text/css" href="./CSS/Barchart.css">
+        <script type='text/javascript' src='./JS/switchCharts.js'></script>
+        <div class="paraclass" id="barchange">
+            POPULATION_DENSITY
+        </div>
+        <link rel="stylesheet" type="text/css" href="./CSS/Insights.css">
+     
+    </div>
+    <div class="paraclassbar" id="barswitchInsights">
+        It can be noted that despite a high population density for Singapore, the number of covid cases and deaths
+        remain minimal.
+    </div>
+    <link rel="stylesheet" type="text/css" href="./CSS/Insights.css">
 
-
-
-
+    <h4
+    style="background-color: #b2e9ae;font-size:larger;border-width: 4px;border-style: solid;border-color: rgb(241, 61, 169);text-align: center;width:1200px;right: 10%;">
+    Research is still going on to determine the exact factors that influenced COVID. Let us see if the wealth or geographic position of a 
+    country affects the spread of COVID-19.</h4>
 
 
 </body>

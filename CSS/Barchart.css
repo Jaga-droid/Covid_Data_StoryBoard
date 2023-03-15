@@ -42,3 +42,13 @@
     border-style: solid;
     border-color: rgb(234, 15, 37);
   }
+
+  .myclass3 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    float:none;
+    background-color: #f8f7f7;
+    border-width: 4px;
+    border-style: solid;
+    border-color: rgb(222, 246, 8);
+  }
