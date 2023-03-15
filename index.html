@@ -137,6 +137,32 @@
     Research is still going on to determine the exact factors that influenced COVID. Let us see if the wealth or geographic position of a 
     country affects the spread of COVID-19.</h4>
 
+    <div class="linecss" id='my_scatter'></div>
+    <link rel="stylesheet" type="text/css" href="./CSS/Linechart.css">
+    <script type='text/javascript' src='./JS/scatter.js'></script>
+    <div class="paraclassbar" id="another">
+        There appears to be a somewhat positive correlation between gdp_per_capita of a country and the spread of COVID-19.
+        However, there is not enough supporting evidence to confirm that this correlation is indeed a causation.
+    </div>
+    <div class="myclass4" id="barswitch2">
+        <button onclick="update_bar('population_density');togglebar('bbar1')" , style="float: left;" ,
+            id="bbar1">Coastal Regions</button>
+        <button onclick="update_bar('hospital_beds_per_thousand');togglebar('bbar2')" , style="float: left;" ,
+            id="bbar2">Island Regions</button>
+        <script type='text/javascript' src='./JS/Barswitch2.js'></script>
+        <link rel="stylesheet" type="text/css" href="./CSS/Barchart.css">
+        <script type='text/javascript' src='./JS/switchCharts.js'></script>
+        <div class="paraclass" id="barchange2">
+            COASTAL REGIONS
+        </div>
+        <link rel="stylesheet" type="text/css" href="./CSS/Insights.css">
+     
+    </div>
+    <div class="paraclassbar" id="barswitchInsights2">
+        When taking geographic position into account, we can see that countries in the coastal regions are affected the most, for instance,
+        America.
+    </div>
+    <link rel="stylesheet" type="text/css" href="./CSS/Insights.css">
 
 </body>
 
