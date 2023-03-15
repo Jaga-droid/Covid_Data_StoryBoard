@@ -1,0 +1,79 @@
+{
+    "name": "China",
+    "value": 30,
+    "type": "black",
+    "level": "yellow",
+    "date": "Jan 2020",
+    "children": [{
+            "name": "USA",
+            "value": 10,
+            "type": "grey",
+            "level": "pink",
+            "date": "March 2020"
+        },
+        {
+            "name": "Europe",
+            "value": 40,
+            "type": "grey",
+            "level": "red",
+            "date": "Jan 2020",
+            "children": [{
+                    "name": "France",
+                    "value": 10,
+                    "type": "grey",
+                    "level": "purple",
+                    "date": "Jan 2020"
+                },
+                {
+                    "name": "Italy",
+                    "value": 20,
+                    "type": "grey",
+                    "level": "purple",
+                    "date": "Feb 2020"
+                },
+                {
+                    "name": "Russia",
+                    "value": 10,
+                    "type": "grey",
+                    "level": "purple",
+                    "date": "Feb 2020"
+                }
+            ]
+        },
+        {
+            "name": "Thailand",
+            "value": 10,
+            "type": "grey",
+            "level": "blue",
+            "date": "Jan 2020"
+        },
+        {
+            "name": "Japan",
+            "value": 10,
+            "type": "grey",
+            "level": "blue",
+            "date": "Jan 2020"
+        },
+        {
+            "name": "South Korea",
+            "value": 10,
+            "type": "grey",
+            "level": "blue",
+            "date": "Jan 2020"
+        },
+        {
+            "name": "India",
+            "value": 20,
+            "type": "grey",
+            "level": "green",
+            "date": "Jan 2020",
+            "children": [{
+                "name": "Singapore",
+                "value": 8,
+                "type": "grey",
+                "level": "orange",
+                "date": "Feb 2020"
+            }]
+        }
+    ]
+}

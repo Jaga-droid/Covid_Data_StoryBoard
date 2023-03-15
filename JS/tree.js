@@ -1,86 +1,4 @@
-const treeData = {
-    "name": "China",
-    "value": 30,
-    "type": "black",
-    "level": "yellow",
-    "date": "Jan 2020",
-    "children": [
-      {
-        "name": "USA",
-        "value": 10,
-        "type": "grey",
-        "level": "pink",
-        "date": "March 2020"
-      },
-      {
-        "name": "Europe",
-        "value": 40,
-        "type": "grey",
-        "level": "red",
-        "date": "Jan 2020",
-        "children": [
-          {
-            "name": "France",
-            "value": 10,
-            "type": "grey",
-            "level": "purple",
-            "date": "Jan 2020"
-          },
-          {
-            "name": "Italy",
-            "value": 20,
-            "type": "grey",
-            "level": "purple",
-            "date": "Feb 2020"
-          },
-          {
-            "name": "Russia",
-            "value": 10,
-            "type": "grey",
-            "level": "purple",
-            "date": "Feb 2020"
-          }
-        ]
-      },
-      {
-        "name": "Thailand",
-        "value": 10,
-        "type": "grey",
-        "level": "blue",
-        "date": "Jan 2020"
-      },
-      {
-        "name": "Japan",
-        "value": 10,
-        "type": "grey",
-        "level": "blue",
-        "date": "Jan 2020"
-      },
-      {
-        "name": "South Korea",
-        "value": 10,
-        "type": "grey",
-        "level": "blue",
-        "date": "Jan 2020"
-      },
-      {
-        "name": "India",
-        "value": 20,
-        "type": "grey",
-        "level": "green",
-        "date": "Jan 2020",
-        "children": [
-          {
-            "name": "Singapore",
-            "value": 8,
-            "type": "grey",
-            "level": "orange",
-            "date": "Feb 2020"
-          }
-        ]
-      }
-    ]
-  };
+
   
   // set the dimensions and margins of the diagram
   const tree_margin = {top: 20, right: 150, bottom: 20, left: 170},
@@ -89,6 +7,11 @@ const treeData = {
   
   // declares a tree layout and assigns the size
   const treemap = d3.tree().size([tree_height, tree_width]);
+
+  
+d3.json('https://raw.githubusercontent.com/Jaga-droid/Covid_Data_StoryBoard/main/Resources/DataSet/treedata.json').then(function (treeData) {
+
+// Set the x and y scales for the chart
   
   //  assigns the data to a hierarchy using parent-child relationships
   let nodes = d3.hierarchy(treeData, d => d.children);
@@ -139,4 +62,5 @@ const treeData = {
     .attr("y", d => d.children && d.depth !== 0 ? -(d.data.value + 5) : d)
     .style("text-anchor", d => d.children ? "end" : "start")
     .text(d => d.data.name + "  ("+d.data.date + ")");
+});
       
