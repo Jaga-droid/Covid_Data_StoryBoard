@@ -55,4 +55,4 @@ function drawpops(file_name_229) {
 });
 }
 
-drawpops('africa')
+// drawpops('africa')
