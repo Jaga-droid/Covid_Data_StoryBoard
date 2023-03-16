@@ -5,8 +5,8 @@ const barswitch_margin_29 = {
     bottom: 70,
     left: 40,
 },
-barswitch_width_29 = window.innerWidth*0.5 - barswitch_margin_29.left - barswitch_margin_29.right,
-barswitch_height_29 = window.innerHeight*0.5 - barswitch_margin_29.top - barswitch_margin_29.bottom;
+barswitch_width_29 = window.innerWidth - barswitch_margin_29.left - barswitch_margin_29.right,
+barswitch_height_29 = window.innerHeight- barswitch_margin_29.top - barswitch_margin_29.bottom;
 
 // append the svg object to the body of the page
 const barswitch_svg29 = d3.select("#lollipop")
