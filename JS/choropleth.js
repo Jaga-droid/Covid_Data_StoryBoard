@@ -31,6 +31,18 @@
     ]).then(function (loadData) {
       let topo = loadData[0]
 
+      map_svg.append("rect")
+      .attr("id","mytooltip")
+      .attr("x",width-(width-100))
+      .attr("y",width/3)
+      .attr('width',width/10)
+      .attr('height',height/2)
+      .style('fill','white')
+      .style('top',0)
+      .transition()
+      .duration(100)
+      .style('opacity',0)
+
       let mouseOver = function (d) {
         d3.selectAll(".Country")
           .transition()
@@ -41,6 +53,19 @@
           .duration(200)
           .style("opacity", 1)
           .style("stroke", "black")
+        d3.select("#mytooltip").transition()
+        .duration(200)
+        .style("opacity",1).style("stroke","black")
+        
+
+        d3.select("#mytooltip")
+        .text("Hello, world!")
+        .style("text-align", "center")
+        .style("line-height", "320px")
+        .style("font-size", "100px")
+        .style("color",'red')
+        
+
       }
 
       let mouseLeave = function (d) {
@@ -52,9 +77,12 @@
           .transition()
           .duration(200)
           .style("stroke", "")
+          d3.select("#mytooltip").transition()
+          .duration(200)
+          .style("opacity",0).style("stroke","black")
       }
 
-
+    
 
       // Draw the map
       map_svg.append("g")
@@ -131,15 +159,6 @@
         .domain([1, 100]) // What's in the data
         .range([4, 50]) // Size in pixel
 
-        const tooltip = d3.select("#mapsvg")
-        .append("div")
-        .style("opacity", 0)
-        .attr("class", "tooltip")
-        .style("background-color", "white")
-        .style("border", "solid")
-        .style("border-width", "1px")
-        .style("border-radius", "5px")
-        .style("padding", "10px")
 
 
 
@@ -149,29 +168,8 @@
         // drawPie(mylocation);
       }
 
-      // A function that change this tooltip when the user hover a point.
-      // Its opacity is set to 1: we can now see it. Plus it set the text and position of tooltip depending on the datapoint (d)
-      var mouseover = function (event, d) {
-        tooltip
-          .style("opacity", 1)
-      }
 
-      var mousemove = function (event, d) {
-        // console.log(d.group);
-        // console.log(event.x);
-        tooltip
-          .html(d.group)
-          .style("left", (event.x) / 2 + "px")
-          .style("top", (event.y) / 2 - 30 + "px")
-
-          
-      }
-
-      // A function that change this tooltip when the leaves a point: just need to set opacity to 0 again
-      var mouseleave = function (event, d) {
-        tooltip
-          .style("opacity", 0)
-      }
+   
 
       // Add circles:
       map_svg
@@ -187,9 +185,6 @@
         .attr("stroke-width", 3)
         .attr("fill-opacity", 0.5)
         .on("click", clickContinent)
-        .on("mouseover", mouseover)
-        .on("mousemove", mousemove)
-        .on("mouseleave", mouseleave)
         .append('title').text(d => d.group)
 
 

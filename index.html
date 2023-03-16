@@ -124,7 +124,7 @@
             POPULATION_DENSITY
         </div>
         <link rel="stylesheet" type="text/css" href="./CSS/Insights.css">
-     
+
     </div>
     <div class="paraclassbar" id="barswitchInsights">
         It can be noted that despite a high population density for Singapore, the number of covid cases and deaths
@@ -133,37 +133,78 @@
     <link rel="stylesheet" type="text/css" href="./CSS/Insights.css">
 
     <h4
-    style="background-color: #b2e9ae;font-size:larger;border-width: 4px;border-style: solid;border-color: rgb(241, 61, 169);text-align: center;width:1200px;right: 10%;">
-    Research is still going on to determine the exact factors that influenced COVID. Let us see if the wealth or geographic position of a 
-    country affects the spread of COVID-19.</h4>
+        style="background-color: #b2e9ae;font-size:larger;border-width: 4px;border-style: solid;border-color: rgb(241, 61, 169);text-align: center;width:1200px;right: 10%;">
+        Research is still going on to determine the exact factors that influenced COVID. Let us see if the wealth or
+        geographic position of a
+        country affects the spread of COVID-19.</h4>
 
     <div class="linecss" id='my_scatter'></div>
     <link rel="stylesheet" type="text/css" href="./CSS/Linechart.css">
     <script type='text/javascript' src='./JS/scatter.js'></script>
     <div class="paraclassbar" id="another">
-        There appears to be a somewhat positive correlation between gdp_per_capita of a country and the spread of COVID-19.
-        However, there is not enough supporting evidence to confirm that this correlation is indeed a causation.
+        There appears to be a somewhat positive correlation between gdp_per_capita of a country and the spread of
+        COVID-19.
+        However, there is not enough supporting evidence to confirm that this correlation is indeed a causation. Let's
+        now look at
+        the effect of geographic position on spread of the pandemic.
     </div>
     <div class="myclass4" id="barswitch2">
-        <button onclick="update_bar('coastal_deaths');togglebar2('bbar11')" , style="float: left;" ,
-            id="bbar11">Coastal Regions</button>
-        <button onclick="update_bar('island_deaths');togglebar2('bbar22')" , style="float: left;" ,
-            id="bbar22">Island Regions</button>
+        <button onclick="update_bar_2('coastal_deaths');togglebar2('bbar11')" , style="float: left;" , id="bbar11">Coastal
+            Regions</button>
+        <button onclick="update_bar_2('island_deaths');togglebar2('bbar22')" , style="float: left;" , id="bbar22">Island
+            Regions</button>
         <script type='text/javascript' src='./JS/Barswitch2.js'></script>
         <link rel="stylesheet" type="text/css" href="./CSS/Barchart.css">
         <script type='text/javascript' src='./JS/switchCharts.js'></script>
         <div class="paraclass" id="barchange2">
-            COASTAL REGIONS
-            (IN THOUSANDS)
+            COASTAL REGIONS(IN THOUSANDS)
         </div>
         <link rel="stylesheet" type="text/css" href="./CSS/Insights.css">
-     
+
     </div>
     <div class="paraclassbar" id="barswitchInsights2">
-        When taking geographic position into account, we can see that countries in the coastal regions are affected the most, for instance,
-        America.
+        When taking geographic position into account, we can see that countries in the coastal regions are affected the
+        most, for instance,America.
     </div>
     <link rel="stylesheet" type="text/css" href="./CSS/Insights.css">
+    <h5
+    style="background-color: #b2e9ae;font-size:larger;border-width: 4px;border-style: solid;border-color: rgb(241, 61, 169);text-align: center;width:1200px;right: 10%;">
+    Snapshot of December 2020</h5>
+    <div class="myclass5" id="tree2020">
+        <script type='text/javascript' src='./JS/dendro2020.js'></script>
+        <link rel="stylesheet" type="text/css" href="./CSS/dendro.css">
+    </div>
+    <h6
+    style="background-color: #b2e9ae;font-size:larger;border-width: 4px;border-style: solid;border-color: rgb(241, 61, 169);text-align: center;width:1200px;right: 10%;">
+    Snapshot of December 2021</h6>
+    <div class="myclass5" id="tree2021">
+        
+        <script type='text/javascript' src='./JS/dendro2021.js'></script>
+        <link rel="stylesheet" type="text/css" href="./CSS/dendro.css">
+    </div>
+
+    
+    <div class="paraclassbar" id="barswitchInsights22">
+        We get to see a snapshot of the end of 2020 and 2021 respectively from the above images. By clustering them on the basis of Covid-19 cases, deaths
+        and more, we see countries converge based on their status against the virus. For instance, in 2020, Australia and Malaysia shared close similarities 
+        in the aftermath of COVID. However , in 2021 it was Malaysia and Italy that shared similarities.
+    </div>
+    <link rel="stylesheet" type="text/css" href="./CSS/Insights.css">
+
+    <h7
+    style="background-color: #b2e9ae;font-size:larger;border-width: 4px;border-style: solid;border-color: rgb(241, 61, 169);text-align: center;width:1200px;right: 10%;">
+    In the midst of the pandemic raging on, vaccines started rolling out to public as early as late 2020. Let us observe the effect of vaccines on the cases, and subsequently, the effect of boosters</h7>
+
+    <div class="paraclassbar" id="barswitchInsights212">
+       These are the top 5 vaccines that were administered in the most number of countries across the world, owing to their efficiency in thwarting the virus
+    </div>
+    <div class="myclass4" id='BarChartid9'></div>
+    <link rel="stylesheet" type="text/css" href="./CSS/Insights.css">
+    <script type='text/javascript' src='./JS/vaccines.js'></script>
+    <link rel="stylesheet" type="text/css" href="./CSS/Barchart.css">
+
+
+
 
 </body>
 

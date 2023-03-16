@@ -47,7 +47,7 @@ function togglebar2(divid) {
     var node_1 = document.getElementById('barchange2');
     switch (divid) {
         case 'bbar11':
-            node_1.textContent='COASTAL REGIONS';
+            node_1.textContent='COASTAL REGIONS (IN THOUSANDS)';
             node.textContent = ' When taking geographic position into account, we can see that countries in the coastal regions are affected the most, for instance, America.';
             break;
         case 'bbar22':

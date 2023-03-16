@@ -5,8 +5,8 @@ const barswitch_margin_2 = {
     bottom: 70,
     left: 40,
 },
-barswitch_width_2 = window.innerWidth*0.8 - barswitch_margin_2.left - barswitch_margin_2.right,
-barswitch_height_2 = window.innerHeight*0.8 - barswitch_margin_2.top - barswitch_margin_2.bottom;
+barswitch_width_2 = window.innerWidth*0.5 - barswitch_margin_2.left - barswitch_margin_2.right,
+barswitch_height_2 = window.innerHeight*0.5 - barswitch_margin_2.top - barswitch_margin_2.bottom;
 
 // append the svg object to the body of the page
 const barswitch_svg2 = d3.select("#barswitch2")
@@ -31,7 +31,7 @@ const yAxis1 = barswitch_svg2.append("g")
 
 // A function that create / update the plot for a given variable:
 
-function update_bar(file_name_22) {
+function update_bar_2(file_name_22) {
 d3.csv('https://raw.githubusercontent.com/Jaga-droid/Covid_Data_StoryBoard/main/Resources/DataSet/Geography/' +
     file_name_22 + '.csv').then(function (data11) {
       
@@ -57,4 +57,4 @@ d3.csv('https://raw.githubusercontent.com/Jaga-droid/Covid_Data_StoryBoard/main/
 }
 
 // Initialize the plot with the first dataset
-update_bar('coastal_deaths')
+update_bar_2('coastal_deaths')
