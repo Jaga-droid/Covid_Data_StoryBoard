@@ -31,17 +31,17 @@
     ]).then(function (loadData) {
       let topo = loadData[0]
 
-      map_svg.append("rect")
-      .attr("id","mytooltip")
-      .attr("x",width-(width-100))
-      .attr("y",width/3)
-      .attr('width',width/10)
-      .attr('height',height/2)
-      .style('fill','white')
-      .style('top',0)
-      .transition()
-      .duration(100)
-      .style('opacity',0)
+      // map_svg.append("rect")
+      // .attr("id","mytooltip")
+      // .attr("x",width-(width-100))
+      // .attr("y",width/3)
+      // .attr('width',width/10)
+      // .attr('height',height/2)
+      // .style('fill','white')
+      // .style('top',0)
+      // .transition()
+      // .duration(100)
+      // .style('opacity',0)
 
       let mouseOver = function (d) {
         d3.selectAll(".Country")
@@ -53,17 +53,17 @@
           .duration(200)
           .style("opacity", 1)
           .style("stroke", "black")
-        d3.select("#mytooltip").transition()
-        .duration(200)
-        .style("opacity",1).style("stroke","black")
+        // d3.select("#mytooltip").transition()
+        // .duration(200)
+        // .style("opacity",1).style("stroke","black")
         
 
-        d3.select("#mytooltip")
-        .text("Hello, world!")
-        .style("text-align", "center")
-        .style("line-height", "320px")
-        .style("font-size", "100px")
-        .style("color",'red')
+        // d3.select("#mytooltip")
+        // .text("Hello, world!")
+        // .style("text-align", "center")
+        // .style("line-height", "320px")
+        // .style("font-size", "100px")
+        // .style("color",'red')
         
 
       }
@@ -165,7 +165,13 @@
       let clickContinent = function (d) {
         var mylocation = d.srcElement.__data__.group;
         console.log(mylocation);
-        // drawPie(mylocation);
+        if(mylocation=='North America'){drawpops('northamerica');}
+        if(mylocation=='South America'){drawpops('southamerica');}
+        if(mylocation=='Africa'){drawpops('africa');}
+        if(mylocation=='Asia'){drawpops('asia');}
+        if(mylocation=='Oceania'){drawpops('oceania');}
+        if(mylocation=='Europe'){drawpops('europe');}
+
       }
 
 
