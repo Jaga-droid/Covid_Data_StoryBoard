@@ -18,7 +18,7 @@ const barswitch_svg29 = d3.select("#lollipop")
 // X axis
 const xbar19 = d3.scaleBand()
 .range([0, barswitch_width_29])
-.padding(0.2);
+.padding(0.5);
 const xAxis19 = barswitch_svg29.append("g")
 .attr("transform", `translate(0,${barswitch_height_29})`);
 
@@ -54,3 +54,5 @@ function drawpops(file_name_229) {
         .attr("fill", "#69b3a2")
 });
 }
+
+drawpops('africa')
