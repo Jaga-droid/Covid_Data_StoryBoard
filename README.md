@@ -12,6 +12,16 @@
 
 ![image](https://github.com/Jaga-droid/Covid_Data_StoryBoard/assets/54204942/4def7f5f-0e11-4a8d-9174-8ae257a33824)
 
+![image](https://github.com/Jaga-droid/Covid_Data_StoryBoard/assets/54204942/3cfdc662-2ec1-4962-b838-6a05b9cefc92)
+
+![image](https://github.com/Jaga-droid/Covid_Data_StoryBoard/assets/54204942/3a5ae358-9986-45cd-86db-1c20cfe1cd7b)
+
+![image](https://github.com/Jaga-droid/Covid_Data_StoryBoard/assets/54204942/1e05e0e2-63c8-4372-a2a2-48c8b2baaabe)
+
+
+
+
+
 
 
 
