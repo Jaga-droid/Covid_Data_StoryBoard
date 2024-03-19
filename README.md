@@ -1,5 +1,8 @@
 # Covid_Data_StoryBoard
 
+## Aim : To narrate the timeline of the COVID-19 pandemic around the world, and the effect the vaccines had on the scale of the outbreak.  The following aspects were illustrated by this storyboard.
+
+
 ![image](https://github.com/Jaga-droid/Covid_Data_StoryBoard/assets/54204942/f2f9e672-7a42-40dc-ba4e-f33d1d437c80)
 
 ![image](https://github.com/Jaga-droid/Covid_Data_StoryBoard/assets/54204942/451f15ac-9293-450b-94c4-7f30c0b84059)
